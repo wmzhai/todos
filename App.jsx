@@ -17,7 +17,8 @@ App = React.createClass({
         }
 
         return {
-            tasks : Tasks.find(query,{sort : {createdAt:-1}}).fetch()
+            tasks : Tasks.find(query,{sort : {createdAt:-1}}).fetch(),
+            incompletedCount: Tasks.find({checked: {$ne : true}}).count()
         }
     },
 
@@ -50,7 +51,7 @@ App = React.createClass({
         return (
             <div className="container">
                 <header>
-                    <h1>Todo List</h1>
+                    <h1>Todo List ({this.data.incompletedCount})</h1>
 
                     <label className="hide-completed">
                         <input
