@@ -18,7 +18,8 @@ App = React.createClass({
 
         return {
             tasks : Tasks.find(query,{sort : {createdAt:-1}}).fetch(),
-            incompletedCount: Tasks.find({checked: {$ne : true}}).count()
+            incompletedCount: Tasks.find({checked: {$ne : true}}).count(),
+            currentUser: Meteor.user()
         }
     },
 
@@ -34,7 +35,9 @@ App = React.createClass({
 
         Tasks.insert({
             text : text,
-            createdAt : new Date()
+            createdAt : new Date(),
+            owner: Meteor.userId(),
+            username: Meteor.user().username
         });
 
         ReactDOM.findDOMNode(this.refs.textInput).value = "";
