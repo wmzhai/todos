@@ -42,7 +42,6 @@ App = React.createClass({
       this.setState({
          hideCompleted: ! this.state.hideCompleted
       });
-
     },
 
     render() {
