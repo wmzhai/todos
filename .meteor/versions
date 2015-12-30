@@ -78,6 +78,7 @@ standard-minifiers@1.0.2
 templating@1.1.5
 templating-tools@1.0.0
 todos-lib@0.0.1
+todos-main@0.0.1
 tracker@1.0.9
 ui@1.0.8
 underscore@1.0.4
