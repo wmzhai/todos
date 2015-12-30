@@ -15,6 +15,10 @@ Task = React.createClass({
         Meteor.call("removeTask", this.props.task._id);
     },
 
+    togglePrivate(){
+      Meteor.call("setPrivate", this.props.task._id, ! this.props.task.private);
+    },
+
     render() {
         const taskClassName = this.props.task.checked ? "checked" : "";
         return (
