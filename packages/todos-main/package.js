@@ -9,6 +9,8 @@ Package.describe({
 Package.onUse(function(api){
     api.use('todos-lib');
 
+    api.use('todos-collection');
+
     api.addFiles([
         'App.jsx',
         'todos.css',
