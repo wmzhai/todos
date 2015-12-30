@@ -11,14 +11,14 @@ Package.onUse(function(api){
 
     api.addFiles([
         'App.jsx',
-        'simple-todos-react.css',
-        'simple-todos-react.html',
+        'todos.css',
+        'todos.html',
         'Task.jsx',
         'AccountsUIWrapper.jsx'
     ],'client');
 
     api.addFiles([
-        'simple-todos-react.jsx'
+        'todos.jsx'
     ]);
 
 
