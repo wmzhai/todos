@@ -7,6 +7,19 @@ Package.describe({
 
 
 Package.onUse(function(api){
-   api.use('todos-lib');
+    api.use('todos-lib');
+
+    api.addFiles([
+        'App.jsx',
+        'simple-todos-react.css',
+        'simple-todos-react.html',
+        'Task.jsx',
+        'AccountsUIWrapper.jsx'
+    ],'client');
+
+    api.addFiles([
+        'simple-todos-react.jsx'
+    ]);
+
 
 });

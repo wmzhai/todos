@@ -8,4 +8,3 @@ meteor-base             # Packages every Meteor app needs to have
 mobile-experience       # Packages for a great mobile UX
 standard-minifiers      # JS/CSS minifiers run for production mode
 todos-main
-todos-lib
