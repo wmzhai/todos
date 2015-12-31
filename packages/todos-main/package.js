@@ -13,14 +13,14 @@ Package.onUse(function(api){
 
     api.addFiles([
         'App.jsx',
-        'todos.css',
-        'todos.html',
+        'main.css',
+        'main.html',
         'Task.jsx',
         'AccountsUIWrapper.jsx'
     ],'client');
 
     api.addFiles([
-        'todos.jsx'
+        'main.jsx'
     ]);
 
 
