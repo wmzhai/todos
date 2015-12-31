@@ -9,12 +9,13 @@ Package.onUse(function(api){
     api.use('todos-lib');
 
     api.addFiles([
-       'tasks.js'
+        'tasks.jsx',
+        'methods.jsx'
     ]);
 
 
     api.addFiles([
-        'publications.js'
+        'publications.jsx'
     ],'server');
 
     api.export('Tasks');
