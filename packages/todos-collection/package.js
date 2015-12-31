@@ -8,8 +8,12 @@ Package.describe({
 Package.onUse(function(api){
     api.use('todos-lib');
 
+    api.addFiles([
+       'tasks.js'
+    ]);
 
 
+    api.export('Tasks');
 
 });
 
