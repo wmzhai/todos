@@ -1,10 +1,15 @@
 
+Tasks.methods = {};
 
-
-Meteor.methods({
-    addTask(text){
+Tasks.methods.insert = new ValidatedMethod({
+    name: 'Tasks.methods.insert',
+    validate: new SimpleSchema({
+        text: {type: String}
+    }).validator(),
+    run({text}){
         if( !Meteor.userId()){
-            throw new Meteor.Error("not-authorized");
+            throw new Meteor.Error('Todos.methods.insert.unauthorized',
+                'Cannot add tasks that is not yours');
         }
 
         Tasks.insert({
@@ -12,7 +17,11 @@ Meteor.methods({
             owner: Meteor.userId(),
             username: Meteor.user().username
         });
-    },
+    }
+
+});
+
+Meteor.methods({
 
     removeTask(taskId){
         const task = Tasks.findOne(taskId);
