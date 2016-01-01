@@ -38,14 +38,24 @@ Tasks.methods.remove = new ValidatedMethod({
     }
 });
 
-Meteor.methods({
-    setChecked(taskId, setChecked){
+Tasks.methods.setChecked = new ValidatedMethod({
+    name: 'Task.methods.setChecked',
+    validate: new SimpleSchema({
+        taskId: {type : String},
+        setChecked: {type: Boolean}
+    }).validator(),
+    run({taskId, setChecked}){
         const task = Tasks.findOne(taskId);
-        if( task.private && task.owner !== Meteor.userId()){
-            throw new Meteor.Error("not-authorized");
+        if( task.owner !== Meteor.userId()){
+            throw new Error('Tasks.methods.setChecked.unauthorized',
+                'cant modify task not belonging to user');
         }
-        Tasks.update(taskId, {$set: {checked:setChecked}});
-    },
+
+        Tasks.update(taskId,{$set: {checked:setChecked}});
+    }
+});
+
+Meteor.methods({
 
     setPrivate(taskId, setToPrivate){
         const task = Tasks.findOne(taskId);

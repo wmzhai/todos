@@ -8,7 +8,12 @@ Task = React.createClass({
     },
 
     toggleChecked(){
-        Meteor.call("setChecked", this.props.task._id, !this.props.task.checked);
+        Tasks.methods.setChecked.call({
+            taskId: this.props.task._id,
+            setChecked: ! this.props.task.checked
+        },(err) => {
+            err && alert(err.error);
+        });
     },
 
     deleteThisTask(){
