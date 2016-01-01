@@ -1,2 +1,6 @@
 
-Tasks = new Mongo.Collection("tasks");
+class TasksCollection extends Mongo.Collection{
+
+}
+
+Tasks = new TasksCollection("tasks");
