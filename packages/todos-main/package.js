@@ -9,7 +9,7 @@ Package.describe({
 Package.onUse(function(api){
     api.use('todos-lib');
 
-    api.use('todos-collection');
+    api.use('todos-data');
 
     api.addFiles([
         'App.jsx',
