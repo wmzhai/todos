@@ -35,4 +35,10 @@ Package.onUse(function(api){
         'accounts-ui@1.1.6',
         'accounts-password@1.1.4'
     ]);
+
+    // DDP
+    api.imply([
+        'mdg:validated-method@0.2.0',
+        'aldeed:simple-schema@1.4.0',
+    ]);
 });
