@@ -55,15 +55,19 @@ Tasks.methods.setChecked = new ValidatedMethod({
     }
 });
 
-Meteor.methods({
-
-    setPrivate(taskId, setToPrivate){
+Tasks.methods.setPrivate = new ValidatedMethod({
+    name: 'Tasks.methods.setPrivate',
+    validate: new SimpleSchema({
+        taskId: {type: String},
+        setToPrivate: {type: Boolean}
+    }).validator(),
+    run({taskId, setToPrivate}){
         const task = Tasks.findOne(taskId);
-
         if( task.owner !== Meteor.userId()){
-            throw new Meteor.Error("not-authorized");
+            throw new Meteor.Error('Tasks.methods.setPrivate.unauthorized',
+                'cant modify task not belonging to the user');
         }
 
-        Tasks.update(taskId,{$set : {private: setToPrivate}});
+        Tasks.update(taskId,{$set: {private: setToPrivate}});
     }
 });

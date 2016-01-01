@@ -25,7 +25,12 @@ Task = React.createClass({
     },
 
     togglePrivate(){
-      Meteor.call("setPrivate", this.props.task._id, ! this.props.task.private);
+        Tasks.methods.setPrivate.call({
+            taskId: this.props.task._id,
+            setToPrivate: ! this.props.task.private
+        },(err) => {
+            err && alert(err.error);
+        });
     },
 
     render() {
