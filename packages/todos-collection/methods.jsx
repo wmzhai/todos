@@ -8,7 +8,7 @@ Tasks.methods.insert = new ValidatedMethod({
     }).validator(),
     run({text}){
         if( !Meteor.userId()){
-            throw new Meteor.Error('Todos.methods.insert.unauthorized',
+            throw new Meteor.Error('Tasks.methods.insert.unauthorized',
                 'Cannot add tasks that is not yours');
         }
 
@@ -21,17 +21,24 @@ Tasks.methods.insert = new ValidatedMethod({
 
 });
 
-Meteor.methods({
-
-    removeTask(taskId){
+Tasks.methods.remove = new ValidatedMethod({
+    name: 'Tasks.methods.remove',
+    validate: new SimpleSchema({
+        taskId: {type : String}
+    }).validator(),
+    run({taskId}){
         const task = Tasks.findOne(taskId);
-        if( task.private && task.owner !== Meteor.userId()){
-            throw  new Meteor.Error("not-authorized");
+
+        if(task.owner !== Meteor.userId()){
+            throw new Meteor.Error("Tasks.methods.remove.unauthorized",
+                'cant remove tasks not belonging to user');
         }
 
         Tasks.remove(taskId);
-    },
+    }
+});
 
+Meteor.methods({
     setChecked(taskId, setChecked){
         const task = Tasks.findOne(taskId);
         if( task.private && task.owner !== Meteor.userId()){

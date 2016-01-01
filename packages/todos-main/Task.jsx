@@ -12,7 +12,11 @@ Task = React.createClass({
     },
 
     deleteThisTask(){
-        Meteor.call("removeTask", this.props.task._id);
+        Tasks.methods.remove.call({
+           taskId: this.props.task._id
+        },(err) => {
+            err && alert(err.error);
+        });
     },
 
     togglePrivate(){
