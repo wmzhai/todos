@@ -13,3 +13,4 @@ the best practice.
   * 重构Methods
 4. 添加测试代码
 5. 添加CI集成
+6. 使用[eslint](http://csspod.com/getting-started-with-eslint/)做代码风格检测
