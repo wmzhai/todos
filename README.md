@@ -18,4 +18,6 @@ the best practice.
   * [Chai](http://chaijs.com/)
   * [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
 7. 完善CI集成
+  * [CircleCI](https://circleci.com)
+  * [GitlabCI]()
 8. 使用[eslint](http://csspod.com/getting-started-with-eslint/)做代码风格检测
