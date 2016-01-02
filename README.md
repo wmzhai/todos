@@ -11,9 +11,11 @@ the best practice.
   * 重构Collection,引入Class
   * 使用SimpleSchema做validation
   * 重构Methods
-4. 添加测试代码
+4. 添加factory库
+5. 添加stub-collections库
+6. 完善测试代码
   * [Mocha](http://mochajs.org/)
   * [Chai](http://chaijs.com/)
   * [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
-5. 添加CI集成
-6. 使用[eslint](http://csspod.com/getting-started-with-eslint/)做代码风格检测
+7. 完善CI集成
+8. 使用[eslint](http://csspod.com/getting-started-with-eslint/)做代码风格检测
