@@ -11,7 +11,7 @@ the best practice.
   * 重构Collection,引入Class
   * 使用SimpleSchema做validation
   * 重构Methods
-4. 添加factory库
+4. 添加factory库, 同时使用TinyTest来测试模块功能
 5. 添加stub-collections库
 6. 完善测试代码
   * [Mocha](http://mochajs.org/)
