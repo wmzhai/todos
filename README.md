@@ -13,7 +13,8 @@ the best practice.
   * 重构Methods
 4. 添加factory库, 同时使用TinyTest来测试模块功能
 5. 添加stub-collections库
-6. 完善测试代码
+6. 添加publication-collector库
+6. 完善todos-lib测试代码
   * [Mocha](http://mochajs.org/) http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html
   * [Chai](http://chaijs.com/)
   * [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
