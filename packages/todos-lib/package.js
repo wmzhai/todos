@@ -5,7 +5,9 @@ Package.describe({
   summary: 'common dependencies of all app packages',
 
   // Version number
-  version: '0.0.1'
+  version: '0.0.1',
+
+  documentation: 'README.md'
 });
 
 /* This defines your actual package */
