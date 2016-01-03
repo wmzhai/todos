@@ -34,6 +34,11 @@ Package.onUse(function(api){
     'react@0.14.3'
   ]);
 
+  // Testing setup
+  api.imply([
+    'factory',
+  ]);
+
   //Accounts
   api.imply([
     'accounts-ui@1.1.6',

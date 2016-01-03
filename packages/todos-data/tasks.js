@@ -47,3 +47,24 @@ Tasks.schema = new SimpleSchema({
 
 
 Tasks.attachSchema(Tasks.schema);
+
+
+
+// This represents the keys from Lists objects that should be published
+// to the client. If we add secret properties to List objects, don't list
+// them here to keep them private to the server.
+Tasks.publicFields = {
+  owner: 1,
+  text: 1,
+  username: 1,
+  createdAt: 1,
+  checked: 1,
+  private: 1
+};
+
+
+Factory.define('task', Tasks, {
+  text: () => faker.lorem.sentence(),
+  createdAt: () => new Date()
+});
+
