@@ -14,7 +14,7 @@ the best practice.
 4. 添加factory库, 同时使用TinyTest来测试模块功能
 5. 添加stub-collections库
 6. 完善测试代码
-  * [Mocha](http://mochajs.org/)
+  * [Mocha](http://mochajs.org/) http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html
   * [Chai](http://chaijs.com/)
   * [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
 7. 完善CI集成
