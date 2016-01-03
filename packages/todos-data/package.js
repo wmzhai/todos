@@ -23,6 +23,12 @@ Package.onUse(function(api){
 
 });
 
-Package.onTest(function(api){
 
+Package.onTest(function (api) {
+  api.use([
+    'todos-test-lib',
+    'todos-data'
+  ]);
+
+  api.addFiles('todos-tests.js', 'server');
 });
