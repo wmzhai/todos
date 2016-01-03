@@ -1,24 +1,25 @@
 
 Package.describe({
-    name: 'todos-data',
-    version: '0.0.1',
-    summary: 'Collections, schemas, publications and methods for the todos app'
+  name: 'todos-data',
+  version: '0.0.1',
+  summary: 'Collections, schemas, publications and methods for the todos app',
+  documentation: 'README.md'
 });
 
 Package.onUse(function(api){
-    api.use('todos-lib');
+  api.use('todos-lib');
 
-    api.addFiles([
-        'tasks.jsx',
-        'methods.jsx'
-    ]);
+  api.addFiles([
+    'tasks.js',
+    'methods.js'
+  ]);
 
 
-    api.addFiles([
-        'publications.jsx'
-    ],'server');
+  api.addFiles([
+    'publications.js'
+  ],'server');
 
-    api.export('Tasks');
+  api.export('Tasks');
 
 });
 
