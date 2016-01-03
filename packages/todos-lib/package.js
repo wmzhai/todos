@@ -14,7 +14,7 @@ Package.describe({
 Package.onUse(function(api){
   //Language Stuff
   api.imply([
-    'ecmascript@0.1.6',
+    'ecmascript',
     'es5-shim@4.1.14'
   ]);
 
