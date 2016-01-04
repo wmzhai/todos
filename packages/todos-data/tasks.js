@@ -21,27 +21,33 @@ Tasks.schema = new SimpleSchema({
   owner: {
     type: String,
     regEx: SimpleSchema.RegEx.Id,
-    denyUpdate: true
+    denyUpdate: true,
+    optional: true
   },
   text: {
     type: String,
-    max: 100
+    max: 100,
+    min: 1
   },
   username: {
     type: String,
-    max: 100
+    max: 100,
+    optional: true
   },
   createdAt: {
     type: Date,
-    denyUpdate: true
+    denyUpdate: true,
+    optional: true
   },
   checked: {
     type: Boolean,
-    defaultValue: false
+    defaultValue: false,
+    optional: true
   },
   private: {
     type: Boolean,
-    defaultValue: false
+    defaultValue: false,
+    optional: true
   }
 });
 
