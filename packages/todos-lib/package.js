@@ -15,7 +15,8 @@ Package.onUse(function(api){
   //Language Stuff
   api.imply([
     'ecmascript',
-    'es5-shim@4.1.14'
+    'es5-shim',
+    'underscore'
   ]);
 
   // Collections

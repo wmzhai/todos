@@ -30,5 +30,5 @@ Package.onTest(function (api) {
     'todos-data'
   ]);
 
-  api.addFiles('todos-tests.js', 'server');
+  api.addFiles('todos-tests.jsx', 'server');
 });
