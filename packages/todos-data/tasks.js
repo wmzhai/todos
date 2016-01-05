@@ -1,5 +1,5 @@
 
-class TasksCollection extends Mongo.Collection{
+class TasksCollection extends Mongo.Collection {
   insert(doc, callback) {
     doc.createdAt = doc.createdAt || new Date();
     const result = super(doc, callback);
@@ -7,7 +7,7 @@ class TasksCollection extends Mongo.Collection{
   }
 }
 
-Tasks = new TasksCollection("tasks");
+Tasks = new TasksCollection('tasks');
 
 // Deny all client-side updates since we will be using methods to manage this collection
 Tasks.deny({
@@ -53,7 +53,6 @@ Tasks.schema = new SimpleSchema({
 
 
 Tasks.attachSchema(Tasks.schema);
-
 
 
 // This represents the keys from Lists objects that should be published
