@@ -149,7 +149,7 @@ Tinytest.add('Factory - Build - Extend - With attributes', (test) => {
 });
 
 Tinytest.add('Factory - Build - Extend - With attributes (check that we do not modify the parent)',
-    (test) => {
+  (test) => {
     Factory.define('author', Authors, {
       name: 'John Smith'
     });
@@ -186,7 +186,7 @@ Tinytest.add('Factory - Build - Extend - Parent with relationship', (test) => {
 });
 
 Tinytest.add('Factory - Build - Extend - Parent with relationship - Extra attributes',
-  (test) =>  {
+  (test) => {
     Factory.define('author', Authors, {
       name: 'John Smith'
     });
@@ -255,7 +255,7 @@ Tinytest.add('Factory - Create - Relationship - return a Factory from function',
 });
 
 Tinytest.add('Factory - Create - Relationship - return a Factory from deep function (dotted)',
-    (test) => {
+  (test) => {
     Factory.define('author', Authors, {
       name: 'John Smith'
     });
@@ -275,7 +275,7 @@ Tinytest.add('Factory - Create - Relationship - return a Factory from deep funct
 );
 
 Tinytest.add('Factory - Create - Relationship - return a Factory from deep function',
-    (test) => {
+  (test) => {
     Factory.define('author', Authors, {
       name: 'John Smith'
     });
