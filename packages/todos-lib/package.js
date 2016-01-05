@@ -7,7 +7,7 @@ Package.describe({
   // Version number
   version: '0.0.1',
 
-  documentation: 'README.md'
+  documentation: null
 });
 
 /* This defines your actual package */
