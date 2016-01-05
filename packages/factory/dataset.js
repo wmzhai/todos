@@ -44,7 +44,7 @@ _.extend(Dataset.prototype, {
     const self = this;
 
     _.each(self.documents, (docs, collectionName) => {
-      _.each(docs, function(doc) {
+      _.each(docs, (doc) => {
         self.collections[collectionName].insert(doc);
       });
     });
@@ -52,7 +52,7 @@ _.extend(Dataset.prototype, {
 
   get(collectionName, id) {
     // XXX: this could be a lot more efficient if we used a collection from the beginning
-    const doc = _.find(this.documents[collectionName], function(d) { return d._id === id; });
+    const doc = _.find(this.documents[collectionName], (d) => { return d._id === id; });
     const transform = this.collections[collectionName]._transform;
     if (transform) {
       return transform(doc);
@@ -71,7 +71,7 @@ _.extend(Dataset.prototype, {
       transform: this.collections[collectionName]._transform
     });
 
-    _.each(this.documents[collectionName], function(doc) {
+    _.each(this.documents[collectionName], (doc) => {
       collection.insert(doc);
     });
 

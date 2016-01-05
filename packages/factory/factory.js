@@ -41,7 +41,7 @@ Factory.prototype.build = function(dataset, props, opts) {
 
   // walk the tree and evaluate
   function walk(subDoc, subProps) {
-    _.each(subProps, function(value, prop) {
+    _.each(subProps, (value, prop) => {
       setProp(subDoc, prop, value);
     });
   }
@@ -59,7 +59,7 @@ Factory.prototype.build = function(dataset, props, opts) {
 
   walk(doc, properties);
 
-  _.each(this.afterBuildCbs, function(callback) {
+  _.each(this.afterBuildCbs, (callback) => {
     callback(doc, dataset);
   });
 
