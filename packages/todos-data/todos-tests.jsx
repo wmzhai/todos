@@ -30,7 +30,13 @@ describe('tasks', () => {
 
     describe('tasks', () => {
       it( 'sends all tasks', () => {
-        //assert.equal(true,true);
+        //const collector = new PublicationCollector({userId});
+        //console.log(collector);
+        //
+        //collector.collect('tasks', (collections) => {
+        //  console.log(collections.Tasks.length);
+        //});
+        assert.equal(true,true);
       });
 
     });

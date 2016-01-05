@@ -16,7 +16,9 @@ Package.onUse(function(api){
   api.imply([
     'ecmascript',
     'es5-shim',
-    'underscore'
+    'underscore',
+    'check',
+    'simple:rest@0.2.3'
   ]);
 
   // Collections
