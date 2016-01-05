@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/wmzhai/todos.svg?style=svg)](https://circleci.com/gh/wmzhai/todos)
+
 # Todos
 
 通过一些中介项目来完成Meteor＋React开发的最佳实践。参考了[Meteor Guide](http://guide.meteor.com/)和其对应的[todos](https://github.com/meteor/todos)项目。
