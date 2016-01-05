@@ -1,7 +1,8 @@
-# Todos with React and FlowRouter
+# Todos
 
-We will convert the 'simple-todos-react' project to a full version 'todos-react', step by step, following the [Meteor Guide](http://guide.meteor.com/) for 
-the best practice.
+通过一些中介项目来完成Meteor＋React开发的最佳实践。参考了[Meteor Guide](http://guide.meteor.com/)和其对应的[todos](https://github.com/meteor/todos)项目。
+
+## Steps
 
 1. 使用todos-lib引用所有公用依赖的第三方库,替代原有的meteor add功能.
 2. 使用todos-main库作为程序的入口.
@@ -11,14 +12,10 @@ the best practice.
   * 重构Collection,引入Class
   * 使用SimpleSchema做validation
   * 重构Methods
-4. 添加factory库, 同时使用TinyTest来测试模块功能
-5. 添加stub-collections库
-6. 添加publication-collector库
-6. 完善todos-lib测试代码
-  * [Mocha](http://mochajs.org/) http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html
-  * [Chai](http://chaijs.com/)
-  * [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
-7. 完善CI集成
-  * [CircleCI](https://circleci.com)
-  * [GitlabCI]()
+5. 完善todos-lib测试代码
+  * 添加factory, stub-collections, publication-collector库
+  * 使用[Mocha](http://mochajs.org/) 和 [Chai](http://chaijs.com/) 编写测试，用到[practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
+6. [CircleCI](https://circleci.com)
+7. [GitlabCI]()
 8. 使用[eslint](http://csspod.com/getting-started-with-eslint/)做代码风格检测
+9. 引入FlowRouter和登录
