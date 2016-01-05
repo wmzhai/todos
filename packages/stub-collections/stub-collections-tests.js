@@ -6,12 +6,12 @@ const Items = new Mongo.Collection('Items');
 if (Meteor.isServer) {
   Items.remove({});
   Items.insert({});
-  Meteor.publish('items', function() { return Items.find(); });
+  Meteor.publish('items', () => { return Items.find(); });
 } else {
   Meteor.subscribe('items');
 }
 
-Tinytest.add('StubCollection - basics', function(test) {
+Tinytest.add('StubCollection - basics', (test) => {
   test.equal(Items.find().count(), 1);
 
   StubCollections.stub(Items);

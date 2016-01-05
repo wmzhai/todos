@@ -3,16 +3,16 @@
 
 const SYMBOLS = _.keys(Mongo.Collection.prototype);
 
-const stubPair = function(pair) {
+const stubPair = (pair) => {
   SYMBOLS.forEach((symbol) => {
     sinon.stub(pair.collection, symbol, _.bind(pair.localCollection[symbol], pair.localCollection));
-});
+  });
 };
 
-const restorePair = function(pair) {
+const restorePair = (pair) => {
   SYMBOLS.forEach((symbol) => {
     pair.collection[symbol].restore();
-});
+  });
 };
 
 StubCollections = {
@@ -25,19 +25,19 @@ StubCollections = {
     collections = collections || StubCollections._collections;
     [].concat(collections).forEach((collection) => {
       if (!StubCollections._pairs[collection._name]) {
-      const options = {transform: collection._transform};
+        const options = {transform: collection._transform};
 
-      const pair = {
-        localCollection: new collection.constructor(null, options),
-        collection
-      };
+        const pair = {
+          localCollection: new collection.constructor(null, options),
+          collection
+        };
 
-      stubPair(pair);
-      StubCollections._pairs[collection._name] = pair;
-    }
-  });
+        stubPair(pair);
+        StubCollections._pairs[collection._name] = pair;
+      }
+    });
   },
-  restore: function() {
+  restore: () => {
     _.each(StubCollections._pairs, restorePair);
     StubCollections._pairs = {};
   }
