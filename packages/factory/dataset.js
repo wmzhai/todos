@@ -43,7 +43,7 @@ _.extend(Dataset.prototype, {
   createAll() {
     const self = this;
 
-    _.each(self.documents, function(docs, collectionName) {
+    _.each(self.documents, (docs, collectionName) => {
       _.each(docs, function(doc) {
         self.collections[collectionName].insert(doc);
       });

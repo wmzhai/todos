@@ -4,6 +4,13 @@ A factory package for Meteor.
 
 This version is very similar to https://atmospherejs.com/dburles/factory although internally it's implementation is quite different.
 
+## 测试这个模块
+
+```bash
+$ meteor test-packages factory 
+```
+
+
 ## Usage
 
 To define a factory:
