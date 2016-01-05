@@ -39,6 +39,17 @@ Package.onUse(function(api){
     'react@0.14.3'
   ]);
 
+  // Routing
+  api.imply([
+    'kadira:flow-router@2.7.0',
+    'kadira:react-layout'
+  ]);
+
+  // css
+  api.imply([
+    'less'
+  ]);
+
   // Testing setup
   api.imply([
     'factory',
