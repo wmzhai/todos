@@ -1,6 +1,6 @@
 /* global PublicationCollector:true */
 
-const EventEmitter = Npm.require("events").EventEmitter;
+const EventEmitter = Npm.require('events').EventEmitter;
 
 // This file describes something like Subscription in
 // meteor/meteor/packages/ddp/livedata_server.js, but instead of sending
@@ -30,7 +30,6 @@ _.extend(PublicationCollector.prototype, {
     if (result) {
       // array-ize
       [].concat(result).forEach(cur => cur._publishCursor(this));
-      console.log(r);
       this.ready();
     }
   },
@@ -41,7 +40,7 @@ _.extend(PublicationCollector.prototype, {
     this._ensureCollectionInRes(collection);
 
     // Make sure to ignore the _id in fields
-    const addedDocument = _.extend({_id: id}, _.omit(fields, "_id"));
+    const addedDocument = _.extend({_id: id}, _.omit(fields, '_id'));
     this.responseData[collection][id] = addedDocument;
   },
   changed(collection, id, fields) {
@@ -51,7 +50,7 @@ _.extend(PublicationCollector.prototype, {
     this._ensureCollectionInRes(collection);
 
     const existingDocument = this.responseData[collection][id];
-    const fieldsNoId = _.omit(fields, "_id");
+    const fieldsNoId = _.omit(fields, '_id');
     _.extend(existingDocument, fieldsNoId);
 
     // Delete all keys that were undefined in fields (except _id)
