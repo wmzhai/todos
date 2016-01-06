@@ -7,10 +7,39 @@
 meteor-base             # Packages every Meteor app needs to have
 mobile-experience       # Packages for a great mobile UX
 standard-minifiers      # JS/CSS minifiers run for production mode
-todos-lib
 
 # Language Stuff
 ecmascript
 es5-shim
 underscore
 check
+
+# Collections
+mongo
+aldeed:collection2
+dburles:collection-helpers
+mdg:validation-error
+reywood:publish-composite
+
+# DDP
+mdg:validated-method
+aldeed:simple-schema
+
+# Client-side libraries
+tracker
+jquery
+blaze-html-templates
+session
+react
+
+# Routing
+kadira:flow-router
+kadira:react-layout
+
+# Accounts
+accounts-ui
+accounts-password
+
+
+# private packages
+factory
