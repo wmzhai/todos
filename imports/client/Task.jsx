@@ -9,8 +9,8 @@ Task = React.createClass({
   toggleChecked(){
     Tasks.methods.setChecked.call({
       taskId: this.props.task._id,
-      setChecked: ! this.props.task.checked
-    },(err) => {
+      setChecked: !this.props.task.checked
+    }, (err) => {
       err && alert(err.error);
     });
   },
@@ -18,7 +18,7 @@ Task = React.createClass({
   deleteThisTask(){
     Tasks.methods.remove.call({
       taskId: this.props.task._id
-    },(err) => {
+    }, (err) => {
       err && alert(err.error);
     });
   },
@@ -27,7 +27,7 @@ Task = React.createClass({
     Tasks.methods.setPrivate.call({
       taskId: this.props.task._id,
       setToPrivate: ! this.props.task.private
-    },(err) => {
+    }, (err) => {
       err && alert(err.error);
     });
   },
@@ -35,7 +35,6 @@ Task = React.createClass({
   render() {
     const taskClassName = (this.props.task.checked ? "checked" : "") + " " +
       (this.props.task.private ? "private" : "");
-
 
     return (
       <li className={taskClassName}>
