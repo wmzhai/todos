@@ -28,7 +28,7 @@ session
 aldeed:template-extension
 percolate:momentum
 
-react
+
 mobile-experience
 chriswessels:hammer
 
@@ -43,3 +43,9 @@ ddp-rate-limiter
 
 mdg:validated-method
 aldeed:simple-schema
+
+react
+kadira:flow-router
+kadira:react-layout
+fourseven:scss
+reywood:bootstrap3-sass
