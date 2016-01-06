@@ -1,5 +1,5 @@
 
-Meteor.publish('tasks', () => {
+Meteor.publish('tasks', function() {
   return Tasks.find({
     $or: [
       {private: {$ne: true}},

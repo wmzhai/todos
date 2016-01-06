@@ -14,15 +14,12 @@ Package.onUse(function(api){
     'methods.js'
   ]);
 
-
   api.addFiles([
     'publications.js'
   ],'server');
 
   api.export('Tasks');
-
 });
-
 
 Package.onTest(function (api) {
   api.use([
