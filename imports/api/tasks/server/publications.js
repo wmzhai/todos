@@ -1,3 +1,4 @@
+import { Tasks } from '../tasks.js';
 
 Meteor.publish('tasks', function() {
   return Tasks.find({
@@ -8,3 +9,4 @@ Meteor.publish('tasks', function() {
     fields: Tasks.publicFields
   });
 });
+
