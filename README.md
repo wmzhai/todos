@@ -20,4 +20,5 @@
 6. [CircleCI](https://circleci.com)
 7. [GitlabCI]()
 8. 使用[eslint](http://csspod.com/getting-started-with-eslint/)做代码风格检测
-9. 引入FlowRouter和登录
+9. 升级到Meteor1.3，并相应重构代码结构
+10. FlowRouter和login,logout
