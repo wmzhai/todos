@@ -7,7 +7,7 @@ class TasksCollection extends Mongo.Collection {
   }
 }
 
-Tasks = new TasksCollection('tasks');
+ Tasks = new TasksCollection('tasks');
 
 // Deny all client-side updates since we will be using methods to manage this collection
 Tasks.deny({
@@ -72,8 +72,6 @@ Factory.define('task', Tasks, {
   text: () => faker.lorem.sentence(),
   createdAt: () => new Date()
 });
-
-
 
 Tasks.methods = {};
 
