@@ -1,7 +1,7 @@
 import { Tasks } from '../api/tasks/tasks.js';
 
 // App component - represents the whole app
-export const  App = React.createClass({
+export const App = React.createClass({
 
   mixins: [ReactMeteorData],
 
