@@ -1,7 +1,8 @@
 import { FlowRouter } from 'kadira:flow-router';
 import { ReactLayout } from 'kadira:react-layout';
-import { App } from '../../imports/client/App.jsx';
-import { MainLayout } from '../../imports/client/MainLayout.jsx';
+import { App } from '../../imports/client/components/App.jsx';
+import { AppNotFound } from '../../imports/client/pages/AppNotFound.jsx';
+import { MainLayout } from '../../imports/client/layouts/MainLayout.jsx';
 
 Meteor.subscribe("tasks");
 
